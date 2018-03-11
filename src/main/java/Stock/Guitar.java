@@ -14,8 +14,12 @@ public class Guitar extends Instrument implements Playable {
         this.numberOfStrings = numberOfStrings;
     }
 
+    public int getNumberOfStrings() {
+        return numberOfStrings;
+    }
+
     @Override
-    public String play(Instrument instrument) {
-        return null;
+    public String play() {
+        return "Brrrrunnnng. While my " + getModel() + " gently weeps...";
     }
 }

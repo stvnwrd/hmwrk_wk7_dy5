@@ -4,7 +4,7 @@ import Stock.Instrument;
 
 public interface Playable {
 
-    public String play(Instrument instrument);
+    public String play();
 
 
 }
