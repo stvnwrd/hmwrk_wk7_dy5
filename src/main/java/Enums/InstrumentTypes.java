@@ -2,11 +2,11 @@ package Enums;
 
 public enum InstrumentTypes {
     KEYBOARD,
-    GUITARS,
-    DRUMS,
+    GUITAR,
+    DRUM,
     WOODWIND,
     STRING,
     BRASS,
     PERCUSSION,
-    OTHERINSTRUMENT;
+    OTHER_INSTRUMENT;
 }

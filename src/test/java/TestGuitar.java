@@ -11,7 +11,7 @@ public class TestGuitar {
 
     @Before
     public void setUp() throws Exception {
-        guitar = new Guitar("Fender", "Telecaster", 400.00, 500.00, InstrumentTypes.GUITARS, "Alder and Maple", "Brown Sunburst", 6 );
+        guitar = new Guitar("Fender", "Telecaster", 400.00, 500.00, InstrumentTypes.GUITAR, "Alder and Maple", "Brown Sunburst", 6 );
     }
 
     @Test
@@ -36,7 +36,7 @@ public class TestGuitar {
 
     @Test
     public void canGetInstrumentType() {
-        assertEquals(InstrumentTypes.GUITARS, guitar.getInstrumentType());
+        assertEquals(InstrumentTypes.GUITAR, guitar.getInstrumentType());
     }
 
     @Test
