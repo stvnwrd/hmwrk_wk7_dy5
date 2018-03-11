@@ -58,4 +58,11 @@ public class TestGuitar {
     public void canPlayGuitar() {
         assertEquals("Brrrrunnnng. While my Telecaster gently weeps...", guitar.play());
     }
+
+    @Test
+    public void canCalculateMarkUp() {
+        assertEquals(100.00, guitar.calculateMarkUp(),0.01);
+    }
+
+
 }

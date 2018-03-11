@@ -58,4 +58,9 @@ public class TestKeyboard {
     public void canPlay() {
         assertEquals("Bleep bloop, this Moog Voyager XL is quality.", keyboard.play());
     }
+
+    @Test
+    public void canCalculateMarkUp() {
+        assertEquals(1100.00, keyboard.calculateMarkUp(), 0.01);
+    }
 }

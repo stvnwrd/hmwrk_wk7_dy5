@@ -39,4 +39,9 @@ public class TestAccessory {
     public void canGetAccessoryType() {
         assertEquals(AccessoryTypes.GUITAR_STRINGS, accessory.getAccessoryType());
     }
+
+    @Test
+    public void canCalculateMarkUp() {
+        assertEquals(1.50, accessory.calculateMarkUp(), 0.01);
+    }
 }

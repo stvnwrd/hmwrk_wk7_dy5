@@ -2,8 +2,9 @@ package Stock;
 
 import Enums.InstrumentTypes;
 import Interfaces.Playable;
+import Interfaces.Sellable;
 
-public class Keyboard extends Instrument implements Playable {
+public class Keyboard extends Instrument implements Playable, Sellable {
 
     int numberOfKeys;
 
@@ -19,5 +20,10 @@ public class Keyboard extends Instrument implements Playable {
     @Override
     public String play() {
         return "Bleep bloop, this " + getMake() + " " + getModel() + " is quality.";
+    }
+
+    @Override
+    public double calculateMarkUp() {
+        return (getResalePrice() - getCostPrice());
     }
 }

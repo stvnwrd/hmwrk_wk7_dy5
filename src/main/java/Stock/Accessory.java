@@ -1,8 +1,9 @@
 package Stock;
 
 import Enums.AccessoryTypes;
+import Interfaces.Sellable;
 
-public class Accessory extends Product {
+public class Accessory extends Product implements Sellable{
 
     private AccessoryTypes accessoryType;
 
@@ -14,4 +15,10 @@ public class Accessory extends Product {
     public AccessoryTypes getAccessoryType() {
         return accessoryType;
     }
+
+    @Override
+    public double calculateMarkUp() {
+        return (getResalePrice() - getCostPrice());
+    }
+    
 }
