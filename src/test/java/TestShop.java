@@ -42,4 +42,13 @@ public class TestShop {
         shop.addStockToShop(accessory);
         assertEquals(3, shop.totalStock());
     }
+
+    @Test
+    public void checkRemoveStock() {
+        shop.addStockToShop(guitar);
+        shop.addStockToShop(keyboard);
+        shop.addStockToShop(accessory);
+        shop.removeStockFromShop(keyboard);
+        assertEquals(2, shop.totalStock());
+    }
 }
