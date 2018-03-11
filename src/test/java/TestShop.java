@@ -51,4 +51,12 @@ public class TestShop {
         shop.removeStockFromShop(keyboard);
         assertEquals(2, shop.totalStock());
     }
+
+    @Test
+    public void checkPotentialProfit() {
+        shop.addStockToShop(guitar);
+        shop.addStockToShop(keyboard);
+        shop.addStockToShop(accessory);
+        assertEquals(1201.50, shop.totalPotentialProfit(), 0.01);
+    }
 }

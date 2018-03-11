@@ -9,10 +9,12 @@ public class Shop {
 
     private String name;
     private ArrayList<Sellable> stock;
+    private double potentialProfit;
 
     public Shop(String name) {
         this.name = name;
         this.stock = new ArrayList<>();
+        this.potentialProfit = 0;
     }
 
     public String getName() {
@@ -30,4 +32,14 @@ public class Shop {
     public void removeStockFromShop(Sellable item) {
         this.stock.remove(item);
     }
+
+
+    public double totalPotentialProfit(){
+        for(Sellable item : stock){
+            potentialProfit += item.calculateMarkUp();
+        }
+        return potentialProfit;
+    }
+
+
 }
